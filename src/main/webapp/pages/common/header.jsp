@@ -16,11 +16,11 @@
             <div class="container">
                 <nav class="nav">
                     <ul data-type="navbar" class="sf-menu">
-                        <li class="active"><a href="./">Главная</a></li>
-                        <li><a href="#">Каталог товаров</a></li>
-                        <li><a href="#">Скидки</a></li>
+                        <li class="active"><a href="/">Главная</a></li>
+                        <li><a href="/market/">Каталог товаров</a></li>
+                        <li><a href="/skidki/">Скидки</a></li>
                         <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="#">Новости</a></li>
+                        <li><a href="/allnews/">Новости</a></li>
                         <li><a href="#">Контакты</a></li>
                         <li><a href="#">Акция</a></li>
                     </ul>
