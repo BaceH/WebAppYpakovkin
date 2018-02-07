@@ -1,4 +1,5 @@
-<%@ page language="java" pageEncoding="UTF-8" session="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" session="true" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     <!--
     ========================================================
                                 HEADER
@@ -16,15 +17,19 @@
             <div class="container">
                 <nav class="nav">
                     <ul data-type="navbar" class="sf-menu">
-                        <li class="active"><a href="/">Главная</a></li>
-                        <li><a href="/market/">Каталог товаров</a></li>
-                        <li><a href="/skidki/">Скидки</a></li>
-                        <li><a href="#">Доставка и оплата</a></li>
-                        <li><a href="/allnews/">Новости</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Акция</a></li>
+                        <c:forEach items="${menuItemList}" var="menu">
+                            <c:if test="${menu.activ}"><c:set var="activ">class="active"</c:set></c:if>
+                            <c:if test="${!menu.activ}"><c:set var="activ"> </c:set></c:if>
+
+                            <li ${activ}><a href="${pageContext.servletContext.contextPath}${menu.link}" title="${menu.description}">${menu.name}</a></li>
+
+                        </c:forEach>
+                        <!--li class="active"><a href="/">Главная</a></li-->
                     </ul>
                 </nav>
             </div>
         </div>
+
     </header>
+
+

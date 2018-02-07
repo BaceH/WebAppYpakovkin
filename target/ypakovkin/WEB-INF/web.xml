@@ -5,8 +5,60 @@
         version="3.0">
 
   <display-name>Интернет-магазин "УПАКОВКИН"</display-name>
+
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>DefaultServlet</welcome-file>
     </welcome-file-list>
 
+    <servlet>
+        <servlet-name>DefaultServlet</servlet-name>
+        <servlet-class>com.ypakovkin.controller.DefaultServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AllnewsServlet</servlet-name>
+        <servlet-class>com.ypakovkin.controller.AllnewsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PageServlet</servlet-name>
+        <servlet-class>com.ypakovkin.controller.PageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MarketServlet</servlet-name>
+        <servlet-class>com.ypakovkin.controller.MarketServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PageServlet</servlet-name>
+        <url-pattern>/skidki</url-pattern>/dostavka_i_oplata
+        <url-pattern>/dostavka_i_oplata</url-pattern>
+        <url-pattern>/contacts</url-pattern>
+        <url-pattern>/akciya</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>MarketServlet</servlet-name>
+        <url-pattern>/market</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DefaultServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>AllnewsServlet</servlet-name>
+        <url-pattern>/allnews</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>*.jpg</url-pattern>
+        <url-pattern>*.png</url-pattern>
+        <url-pattern>*.ico</url-pattern>
+        <url-pattern>*.gif</url-pattern>
+    </servlet-mapping>
 </web-app>

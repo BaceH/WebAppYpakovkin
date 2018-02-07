@@ -22,7 +22,7 @@ public class MenuDao {
         dataSource = DataSource.getInstance();
     }
 
-    public List<MenuItem> getAll(int indexIdMenu) {
+    public List<MenuItem> getAll(int indexIdMenu, String linkMenuItem) {
         List<MenuItem> result = new LinkedList<>();
 
         try(    Connection connection = dataSource.getConnection();
@@ -35,8 +35,14 @@ public class MenuDao {
                 menuItem = new MenuItem();
                 menuItem.setId(resultSet.getString("_IDRRef"));
                 menuItem.setName(resultSet.getString("_Description"));
-                menuItem.setLink(resultSet.getString("_Fld5391"));
+                menuItem.setLink("/" + resultSet.getString("_Fld5391"));
                 menuItem.setDescription(resultSet.getString("_Fld5393"));
+                if (menuItem.getLink().equals(linkMenuItem)){
+                    menuItem.setActiv(true);
+                }
+                else {
+                    menuItem.setActiv(false);
+                }
 
                 result.add(menuItem);
             }

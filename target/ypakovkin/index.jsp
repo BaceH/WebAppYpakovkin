@@ -1,5 +1,6 @@
-<%@ page language="java" pageEncoding="UTF-8" session="true"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" session="true" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,6 +60,10 @@
                         <p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatu. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p><a href="#" class="btn">Read more</a>
                     </div>
 
+                    <div class="grid_9">
+                        <h2>${PathInfo}</h2>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -67,6 +72,6 @@
     <c:import url="/pages/common/footer.jsp" />
     <!-- FOOTER -->
 </div>
-<script src="js/script.js"></script>
+<script src="<c:url value="/js/script.js" />"></script>
 </body>
 </html>

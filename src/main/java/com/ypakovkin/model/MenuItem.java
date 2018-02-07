@@ -4,11 +4,13 @@ public class MenuItem extends Entity<String> {
     private String name;
     private String link;
     private String description;
+    private boolean activ;
 
-    public MenuItem(String name, String link, String description) {
+    public MenuItem(String name, String link, String description, boolean activ) {
         this.name = name;
         this.link = link;
         this.description = description;
+        this.activ = activ;
     }
     public MenuItem() {
     }
@@ -33,4 +35,8 @@ public class MenuItem extends Entity<String> {
                 "link:" + link +
                 "description:" + description + "}";
     }
+
+    public boolean isActiv() {  return activ;   }
+
+    public void setActiv(boolean activ) {   this.activ = activ; }
 }
