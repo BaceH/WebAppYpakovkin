@@ -1,18 +1,18 @@
 package com.ypakovkin.model;
 
-public class MenuItem extends Entity<String> {
+public class MenuList extends Entity<String> {
     private String name;
     private String link;
     private String description;
     private boolean activ;
 
-    public MenuItem(String name, String link, String description, boolean activ) {
+    public MenuList(String name, String link, String description, boolean activ) {
         this.name = name;
         this.link = link;
         this.description = description;
         this.activ = activ;
     }
-    public MenuItem() {
+    public MenuList() {
     }
 
     public String getName() {   return name;   }

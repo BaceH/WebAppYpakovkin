@@ -1,8 +1,10 @@
-<%@ page language="java" pageEncoding="UTF-8" session="true"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" session="true" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <head>
-    <title>Home</title>
+    <title>${itemMenu.title}</title>
+    <meta name="description" content="${itemMenu.description}">
+    <meta name="Keywords" content="${itemMenu.keywords}">
     <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <link rel="icon" href="<c:url value="/images/favicon.ico" />" type="image/x-icon">

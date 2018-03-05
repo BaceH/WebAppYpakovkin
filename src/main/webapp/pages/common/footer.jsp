@@ -59,6 +59,13 @@
         </section>
         <section>
             <div class="container">
+                <div class="copyright">
+                 +${PathInfo}+
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
                 <div class="copyright">YPAKOVKIN.com © <span id="copyright-year"></span>.&nbsp;&nbsp;<a href="index-5.html">Privacy Policy</a>
                 </div>
             </div>

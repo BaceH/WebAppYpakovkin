@@ -1,7 +1,7 @@
 package com.ypakovkin.dao;
 
 import com.ypakovkin.datasource.DataSource;
-import com.ypakovkin.model.MenuItem;
+import com.ypakovkin.model.MenuList;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -22,22 +22,23 @@ public class MenuDao {
         dataSource = DataSource.getInstance();
     }
 
-    public List<MenuItem> getAll(int indexIdMenu, String linkMenuItem) {
-        List<MenuItem> result = new LinkedList<>();
+    public List<MenuList> getAll(int indexIdMenu, String linkMenuItem) {
+        List<MenuList> result = new LinkedList<>();
 
         try(    Connection connection = dataSource.getConnection();
                 PreparedStatement preparedStatement = connection.prepareStatement(SELECT_MENU)){
 
             preparedStatement.setInt(1,indexIdMenu);
             ResultSet resultSet = preparedStatement.executeQuery();
-            MenuItem menuItem = null;
+            MenuList menuItem = null;
             while (resultSet.next()){
-                menuItem = new MenuItem();
+                menuItem = new MenuList();
                 menuItem.setId(resultSet.getString("_IDRRef"));
                 menuItem.setName(resultSet.getString("_Description"));
-                menuItem.setLink("/" + resultSet.getString("_Fld5391"));
+                String link = resultSet.getString("_Fld5391");
+                menuItem.setLink("/" + link);
                 menuItem.setDescription(resultSet.getString("_Fld5393"));
-                if (menuItem.getLink().equals(linkMenuItem)){
+                if (linkMenuItem.equals("/" + link) || linkMenuItem.equals(link)){
                     menuItem.setActiv(true);
                 }
                 else {

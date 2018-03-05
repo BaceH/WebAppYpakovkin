@@ -29,7 +29,7 @@ public class SelectItemMenuDao {
 
             preparedStatement.setString(1,itemMenuLink);
             ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
+            while(resultSet.next()) {
                 itemMenu.setId(resultSet.getString("_IDRRef"));
                 itemMenu.setName(resultSet.getString("_Description"));
                 itemMenu.setLink("/" + resultSet.getString("_Fld5391"));

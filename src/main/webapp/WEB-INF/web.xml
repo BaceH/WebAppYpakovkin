@@ -30,7 +30,7 @@
 
     <servlet-mapping>
         <servlet-name>PageServlet</servlet-name>
-        <url-pattern>/skidki</url-pattern>/dostavka_i_oplata
+        <url-pattern>/skidki</url-pattern>
         <url-pattern>/dostavka_i_oplata</url-pattern>
         <url-pattern>/contacts</url-pattern>
         <url-pattern>/akciya</url-pattern>
@@ -50,6 +50,7 @@
     <servlet-mapping>
         <servlet-name>AllnewsServlet</servlet-name>
         <url-pattern>/allnews</url-pattern>
+        <url-pattern>/allnews/*</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

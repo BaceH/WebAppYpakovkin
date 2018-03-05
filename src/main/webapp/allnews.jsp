@@ -51,9 +51,6 @@
                                     <img src="images/page-3_img05.jpg" alt="">
                                 </div>
                             </div>
-                            <div class="grid_9">
-                                <h2>${PathInfo}</h2>
-                            </div>
                         </section>
 
                     </div>
